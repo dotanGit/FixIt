@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/post_user_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="User avatar"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/post_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="John Doe"
+            app:layout_constraintBottom_toTopOf="@+id/post_timestamp"
+            app:layout_constraintStart_toEndOf="@+id/post_user_avatar"
+            app:layout_constraintTop_toTopOf="@+id/post_user_avatar"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/post_user_type_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Customer"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            style="@style/Widget.Material3.Chip.Assist"
+            app:chipMinHeight="24dp"
+            app:chipBackgroundColor="?attr/colorPrimaryContainer"
+            app:chipStrokeWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/post_user_name"
+            app:layout_constraintStart_toEndOf="@+id/post_user_name"
+            app:layout_constraintTop_toTopOf="@+id/post_user_name"
+            tools:text="Technician" />
+
+        <TextView
+            android:id="@+id/post_timestamp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="12sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            tools:text="2 hours ago"
+            app:layout_constraintBottom_toBottomOf="@+id/post_user_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/post_user_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/post_user_name" />
+
+        <TextView
+            android:id="@+id/post_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:maxLines="10"
+            android:ellipsize="end"
+            tools:text="This is the content of the post. It can be multiple lines long and will wrap as needed."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_user_avatar" />
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:contentDescription="Post image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_content"
+            tools:visibility="visible"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/post_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:drawablePadding="4dp"
+            tools:text="5 comments"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_image" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/post_status_badge"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:chipMinHeight="28dp"
+            app:chipStrokeWidth="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_comment_count"
+            tools:text="Waiting for Response" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
