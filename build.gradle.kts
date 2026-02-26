@@ -5,4 +5,5 @@ plugins {
     alias(libs.plugins.google.services) apply false
     alias(libs.plugins.android.room) apply false
     alias(libs.plugins.kotlin.kapt) apply false
+    alias(libs.plugins.androidx.navigation.safe.args) apply false
 }
