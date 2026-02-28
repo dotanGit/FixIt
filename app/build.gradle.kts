@@ -67,6 +67,8 @@ dependencies {
     implementation(libs.androidx.fragment)
     implementation(libs.androidx.swiperefreshlayout)
 
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
